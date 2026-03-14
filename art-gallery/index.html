@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Art Gallery | Minimalist</title>
+    <link rel="stylesheet" href="./style.css">
+    <style>
+        /* 补充detail-view的基础样式（原CSS里没给，加上避免显示异常） */
+        .detail-view {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(245,245,245,0.98);
+            display: none;
+            opacity: 0;
+            z-index: 999;
+            flex-direction: column;
+            padding: 5%;
+        }
+        .close-btn {
+            cursor: pointer;
+            font-weight: 900;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+    <nav class="nav-bar">
+        <div class="logo">ART COLLECTION</div>
+        <ul class="nav-links">
+            <li>HOME</li>
+            <li>ARTISTS</li>
+            <li>EXHIBITIONS</li>
+        </ul>
+        <div class="hamburger"><span></span><span></span></div>
+    </nav>
+
+<pre><code>&lt;header class=&quot;hero-title&quot;&gt;
+    &lt;h1 class=&quot;split-text&quot;&gt;ART COLLECTION&lt;/h1&gt;
+&lt;/header&gt;
+
+&lt;main class=&quot;gallery-container&quot;&gt;
+    &lt;div class=&quot;art-item&quot; data-id=&quot;1&quot;&gt;
+        &lt;div class=&quot;img-wrapper&quot;&gt;
+            &lt;img src=&quot;art1.jpg&quot; alt=&quot;Art 1&quot;&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;art-info&quot;&gt;
+            &lt;h3&gt;CLAUDE MONET&lt;/h3&gt;
+            &lt;p&gt;Water Lilies, 1906&lt;/p&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;!-- 你可以复制上面的.art-item块，添加更多艺术作品 --&gt;
+&lt;/main&gt;
+
+&lt;div class=&quot;detail-view&quot;&gt;
+    &lt;div class=&quot;close-btn&quot;&gt;CLOSE&lt;/div&gt;
+    &lt;div class=&quot;detail-content&quot;&gt;
+        &lt;div class=&quot;detail-img-placeholder&quot;&gt;&lt;/div&gt;
+        &lt;div class=&quot;detail-text&quot;&gt;
+            &lt;h2 class=&quot;detail-title&quot;&gt;&lt;/h2&gt;
+            &lt;p class=&quot;detail-desc&quot;&gt;&lt;/p&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;script src=&quot;https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js&quot;&gt;&lt;/script&gt;
+&lt;script src=&quot;./script.js&quot;&gt;&lt;/script&gt;
+</code></pre>
+</body>
+</html>
